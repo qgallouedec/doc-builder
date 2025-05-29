@@ -160,11 +160,11 @@ jobs:
           if [[ -n "${{ inputs.package_path }}" ]]
           then
             cd ${{ inputs.package_path }}
-            $PIP_OR_UV install .[dev]
+            $PIP_OR_UV install .
           elif [[ "${{ inputs.additional_args }}" != *"--not_python_module"* ]];
           then
             cd ${{ inputs.package }}
-            $PIP_OR_UV install .[dev]
+            $PIP_OR_UV install .
           fi
           cd ..
 
